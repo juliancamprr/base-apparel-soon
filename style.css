@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Josefin Sans";
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.base_content {
+  margin-left: 10em;
+}
+
+.logo_mark {
+  margin: 3em 0;
+}
+
+.title_main {
+  text-transform: uppercase;
+  width: 42em;
+  letter-spacing: 0.3em;
+  font-weight: 300;
+}
+
+.title_main h1 {
+  font-size: 5em;
+}
+
+.title_main span {
+  color: hsl(0, 36%, 70%);
+}
+
+.paragraph p {
+  width: 27em;
+  margin-top: 1em;
+  color: hsl(0, 36%, 70%);
+}
+
+.hero_image {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero_image img {
+  object-fit: contain;
+  object-position: right;
+  width: 100%;
+  height: 100%;
+}
+
+.emailForm {
+    margin-top: 1.5em;
+    color: hsl(0, 93%, 68%);
+}
+
+.emailForm {
+    position: relative;
+}
+
+.emailForm input {
+    border-radius: 30px;
+    padding: 15px;
+    border: 1px solid hsl(0, 74%, 74%);
+    width: 32em;
+}
+
+.emailForm input:focus {
+    outline: none;
+}
+
+.emailForm button {
+    width: 70px;
+    position: absolute;
+    right: 17em;
+    border: 1px solid;
+    border-radius: 27px;
+    height: 47px;
+    background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    cursor: pointer;
+}
+
+.emailForm button:active {
+    box-shadow:  1px 1px 1px 1px rgb(255, 158, 158);
+}
+
+.hero_image_mobile {
+    display: none;
+}
+
+
+.invalid {
+    display: none;
+    margin-top: 1em;
+}
+
+.emailForm #error {
+    display: none;
+    position: absolute;
+    right: 20em;
+    height: 2em;
+    top: 8px;
+}
+
+@media screen and (max-width: 768px) {
+
+  /* Esconde a imagem de desktop em telas menores */
+  .hero_image {
+      display: none;
+  }
+
+  /* Exibe a imagem mobile em telas menores */
+  .hero_image_mobile {
+    width: 100%;
+    display: block;
+}
+
+  /* Ajustes gerais para telas menores */
+  .container {
+    padding: 0;
+}
+
+  .base_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin-left: 0.3em;
+  }
+
+  .logo_mark {
+      margin-bottom: 20px;
+  }
+
+  .logo_mark .logo {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .title_main {
+      margin-top: 20px;
+  }
+
+  .title_main h1 {
+      font-size: 1.5em;
+  }
+
+  .title_main h1 span {
+      display: block;
+  }
+
+  .paragraph {
+      margin-top: 20px;
+  }
+
+  .paragraph p {
+    font-size: 1em;
+    width: 21em;
+}
+
+  .emailForm {
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  .emailForm input[type="email"] {
+    width: 75%;
+}
+
+.emailForm button {
+  width: 26%;
+  right: 2em;
+}
+
+.emailForm #error {
+  right: 10em;
+}
+}
